@@ -12,16 +12,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // print all rotation angle of Horloge
-        print("Horloge rotation: " + Horloge.transform.rotation.eulerAngles);
-        // print all rotation angle of Horloge
-        print("Horloge rotation x : " + Horloge.transform.rotation.eulerAngles.x);
-        print("Horloge rotation y : " + Horloge.transform.rotation.eulerAngles.y);
-        print("Horloge rotation z : " + Horloge.transform.rotation.eulerAngles.z);
-
-        if(Horloge.transform.rotation.eulerAngles.z > 180)
+        if (Horloge.transform.rotation.eulerAngles.z > 180)
         {
             print("Horloge is full rotated");
+            //do something
+            Destroy(GetComponent<GameManager>());
         }
         
     }
